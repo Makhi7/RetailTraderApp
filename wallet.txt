@@ -1,0 +1,10 @@
+virtual wallet
+
+1. What is a virtual wallet?
+It is a web application that keeps record of money that is in a client's crypto account.
+
+2. Who uses a virtual wallet?
+A user that owns crypto revenue.
+
+3. Background research
+use spring to build a virtual wallet
