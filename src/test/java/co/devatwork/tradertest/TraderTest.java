@@ -85,14 +85,36 @@ public class TraderTest {
         Trader objTestTwo = new Trader("Taufiq","salie@proton.com",broker,200);
 
         double depositInWallet = 220.00;
-        objTest.depositMoneyInWallet(depositInWallet);
+        //setter update
         objTest.depositMoneyInWallet(depositInWallet);
         double depositMadeOne =objTest.getWalletAmount();
-        double depositMadeTwo = objTestTwo.depositMoneyInWallet(depositInWallet);
 
-        assertEquals(940.78,depositMadeOne);
-//        assertEquals(420.,depositMadeTwo);
+        objTestTwo.depositMoneyInWallet(depositInWallet);
+        double depositMadeTwo = objTestTwo.getWalletAmount();
 
+        assertEquals(720.78,depositMadeOne);
+        assertEquals(420.,depositMadeTwo);
     }
 
+    //create a test that shows money deposited in wallet
+    //inputs: traderName, Money
+    //output: sum of (wallet + money in)
+    @Test
+    public void shouldWithdrawMoneyInTradersWallet(){
+
+        Broker broker = new Broker("Easy Equities");
+        Trader objTest = new Trader("Jasmine","jazzy6@telephunk.co.za",broker,5000.00);
+
+        double withdrawFromWallet = 1500.00;
+        //setter update
+        objTest.withdrawMoneyInWallet(withdrawFromWallet);
+        objTest.withdrawMoneyInWallet(withdrawFromWallet);
+        double depositMadeOne =objTest.getWalletAmount();
+
+        assertEquals(2000.00,depositMadeOne);
+    }
+
+    //create a test that shows trader buying stock from Broker
+    //inputs:
+    //outputs
 }
