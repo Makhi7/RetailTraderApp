@@ -57,12 +57,19 @@ public class Trader {
     }
 
     public double getWalletAmount() {
+
+//        double depositCall = depositMoneyInWallet(this.wallet);
+//        if (depositCall > this.wallet){
+//            return this.wallet + depositCall;
+//        }
         return this.wallet;
     }
 
-    public double depositMoneyInWallet(double depositInWallet) {
-        double balance = getWalletAmount();
-        balance+=depositInWallet;
-        return balance;
+    public void depositMoneyInWallet(double depositInWallet) {
+        this.wallet += depositInWallet;
+    }
+
+    public void withdrawMoneyInWallet(double withdrawFromWallet) {
+        this.wallet -= withdrawFromWallet;
     }
 }
